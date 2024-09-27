@@ -127,3 +127,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function downloadCV() {
+    // Replace 'path/to/your/cv.pdf' with the actual path to your PDF file
+    const pdfUrl = 'path/to/your/cv.pdf';
+    
+    // Create a temporary anchor element
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    
+    // Set the download attribute with the desired file name
+    link.download = 'Felipe_Lourenco_CV.pdf';
+    
+    // Append the link to the body
+    document.body.appendChild(link);
+    
+    // Programmatically click the link to trigger the download
+    link.click();
+    
+    // Remove the link from the body
+    document.body.removeChild(link);
+}

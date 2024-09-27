@@ -81,6 +81,11 @@ p {
     margin: 0 5px;
     cursor: pointer;
     opacity: 50%;
+    transition: opacity 0.3s;
+}
+
+.tab:hover {
+    opacity: 70%;
 }
 
 .tab.active {
@@ -177,7 +182,7 @@ p {
 /* Profile Section */
 .profile-section {
     background-color: #474A4D;
-    padding: 50px;
+    padding: 50px 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -290,8 +295,8 @@ p {
 /* Responsive styles */
 @media screen and (max-width: 1023px) {
 
-    .header {
-        padding: 0 0 100px 0;
+    header {
+        padding: 0 0 90px 0;
     }
 
     .right-aligned-section {
@@ -315,12 +320,13 @@ p {
 
     .artwork-box__text {
         text-align: center;
-        margin-top: 20px;
-        margin-left: 0;
+        margin: 20px auto 0;
+        padding: 0 25px;
     }
 
     .artwork-box__text p {
         text-align: center;
+        width: 100%;
     }
 
     .tabs {
@@ -328,7 +334,7 @@ p {
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 20px;
-        max-width: 290px;
+        max-width: 311px;
         width: 100%;
     }
 
@@ -374,7 +380,6 @@ p {
     }
 
     .tab {
-        font-size: 14px;
         padding: 5px 10px;
     }
 }
