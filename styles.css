@@ -1,0 +1,380 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Apply Geist font to all text elements */
+body, h1, h2, h3, h4, h5, h6, p, span, a, button {
+    font-family: 'Geist', sans-serif;
+}
+
+/* Rest of your existing styles... */
+
+/* You can also specify different weights for different elements if needed */
+h1, h2, h3 {
+    font-weight: 700; /* Bold */
+}
+
+p {
+    font-weight: 400; /* Regular */
+}
+
+/* ... rest of your styles ... */
+
+/* Header Section */
+header {
+    background: linear-gradient(180deg, #2B2B2B 0%, #474A4D 5.21%, #95949A 29.17%, #DDDCD6 41.67%, #D4DCDA 58.85%, #D4DCDA 100%), linear-gradient(180deg, #16160E 0%, #1D1F18 9.9%, #6C848D 100%), #FFF;
+    padding: 20px 0 80px 0;
+    position: relative;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+}
+
+.right-aligned-section {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.artwork-container {
+    /* Adjust the max-width as needed */
+    max-width: 70%;
+}
+
+.main-artwork {
+    width: 650px;
+    height: auto;
+}
+
+/* You might need to adjust other styles to fit this new layout */
+
+
+.tabs {
+    position: absolute;
+    bottom: 20px;
+    border-radius: 12px;
+    border-top: 1px solid #505050;
+    background: #2F2F2F;
+    box-shadow: 0px 5px 4px 0px rgba(236, 236, 236, 0.03) inset, 0px 0px 0px 1px #262626, 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+    left: 50%;
+    font-size: 16px;
+    transform: translateX(-50%);
+}
+
+.tab {
+    background: none;
+    border: none;
+    color: #E0E0E0;
+    font-size: 16px;
+    padding: 10px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.tab.active {
+    opacity: 100%;
+}
+
+.artwork-box {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.artwork-box__text {
+    margin-left: -20%;
+}
+
+.artwork-box__text p {
+    color: #2B2B2B;
+    font-size: 22px;
+    text-align: left;
+    width: 90%;
+}
+
+/* Slider Section */
+.slider-section {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+}
+
+.slide {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.slide:hover {
+    transform: scale(1.05);
+}
+
+.swiper-slide {
+    cursor: pointer;
+}
+
+.swiper-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-wrapper div.swiper-slide {
+    margin-right: 0 !important;
+    min-width: 200px;
+    flex-shrink: 0;
+}
+
+.swiper-slide img {
+    width: 100%;
+    display: block;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background with 50% opacity */
+    backdrop-filter: blur(5px); /* Background blur */
+    border-radius: 50%; /* Makes the background circular */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+    color: white; /* White arrow color for better visibility */
+    font-weight: bold; /* Make the arrow bolder */
+}
+
+/* Optional: Add hover effect for better interactivity */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
+
+/* Profile Section */
+.profile-section {
+    background-color: #474A4D;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-content {
+    display: flex;
+    gap: 50px;
+}
+
+.profile-text {
+    margin: 60px 0 0;
+    max-width: 400px;
+}
+
+.profile-text h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.profile-image img {
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.download-btn {
+    border-radius: 9px;
+    border: 0 solid #505050;
+    border-top: 1px solid #505050;
+    background: #2F2F2F;
+    box-shadow: 0px 5px 4px 0px rgba(236, 236, 236, 0.03) inset, 0px 0px 0px 1px #262626, 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    color: #E0E0E0;
+    font-size: 16px;
+    display: flex;
+    padding: 6px 14px;
+    align-items: center;
+    gap: 7px;
+    margin-top: 20px;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background: #3d3d3d;
+}
+
+.swiper-slide.hidden {
+    display: none;
+}
+
+/* Fullscreen Overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #C0C6C9; /* Fully opaque subtle vanilla yellow */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.overlay-image img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-image,
+.overlay-text {
+    width: 50%;
+}
+
+.overlay-text {
+    color: #2B2B2B; /* Ensure text is black */
+}
+
+.overlay-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px; /* Add some space between title and description */
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: black; /* Change close button color to black */
+    cursor: pointer;
+}
+
+/* Show overlay */
+#overlay.visible {
+    display: flex;
+}
+
+/* Existing styles... */
+
+/* Responsive styles */
+@media screen and (max-width: 1023px) {
+
+    .header {
+        padding: 0 0 100px 0;
+    }
+
+    .right-aligned-section {
+        display: block;
+    }
+
+    .artwork-container {
+        max-width: 100%;
+    }
+
+    .artwork-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-artwork {
+        width: 100%;
+        height: auto;
+    }
+
+    .artwork-box__text {
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .artwork-box__text p {
+        text-align: center;
+    }
+
+    .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        max-width: 290px;
+        width: 100%;
+    }
+
+    .tab {
+        margin: 5px;
+    }
+
+    /* Adjust slider for mobile */
+    .swiper-slide {
+        width: 100% !important;
+    }
+
+    /* Adjust profile section for mobile */
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .profile-image {
+        margin-bottom: 20px;
+    }
+
+    .profile-image img {
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        font-size: 14px;
+    }
+
+    .artwork-box__text p {
+        font-size: 16px;
+    }
+
+    .tab {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
