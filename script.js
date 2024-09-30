@@ -77,6 +77,9 @@ function openOverlay(slide) {
         overlaySwiper.update();
     } else {
         overlaySwiper = new Swiper('.overlay-swiper', {
+            loop: true,
+            spaceBetween: 0,
+            slidesPerView: 1,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
