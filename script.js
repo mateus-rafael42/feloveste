@@ -161,19 +161,19 @@ function downloadCV() {
      // Open the PDF in a new tab
      window.open(pdfUrl, '_blank');
     
-    // Create a temporary anchor element
-    const link = document.createElement('a');
-    link.href = pdfUrl;
+    // // Create a temporary anchor element
+    // const link = document.createElement('a');
+    // link.href = pdfUrl;
     
-    // Set the download attribute with the desired file name
-    link.download = 'CV - Felipe Lourenço.pdf';
+    // // Set the download attribute with the desired file name
+    // link.download = 'CV - Felipe Lourenço.pdf';
     
-    // Append the link to the body
-    document.body.appendChild(link);
+    // // Append the link to the body
+    // document.body.appendChild(link);
     
-    // Programmatically click the link to trigger the download
-    link.click();
+    // // Programmatically click the link to trigger the download
+    // link.click();
     
-    // Remove the link from the body
-    document.body.removeChild(link);
+    // // Remove the link from the body
+    // document.body.removeChild(link);
 }
