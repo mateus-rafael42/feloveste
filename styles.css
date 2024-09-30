@@ -480,7 +480,7 @@ header {
     .overlay-content {
         flex-direction: column;
         height: auto;
-        padding-bottom: 900px; /* Add some padding at the bottom */
+        padding-bottom: 901px; /* Add some padding at the bottom */
         padding-top: 70px;
     }
 
