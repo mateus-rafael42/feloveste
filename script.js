@@ -33,45 +33,72 @@ const slidesOverlay = document.querySelectorAll('.swiper-slide');
 
 // Get overlay elements
 const overlay = document.getElementById('overlay');
-const overlayImage = overlay.querySelector('.overlay-image img');
 const overlayTitle = overlay.querySelector('.overlay-text h2');
 const overlayDescription = overlay.querySelector('.overlay-text p');
 const closeBtn = overlay.querySelector('.close-btn');
 
+let overlaySwiper;
+
 // Add click event to each slide
 slidesOverlay.forEach(slide => {
   slide.addEventListener('click', () => {
-    // Get data from slide (you'll need to add these data attributes to your slides)
-    const imageSrc = slide.getAttribute('data-image');
-    const title = slide.getAttribute('data-title');
-    const description = slide.getAttribute('data-description');
-
-    // Set overlay content
-    overlayImage.src = imageSrc;
-    overlayTitle.textContent = title;
-    overlayDescription.textContent = description;
-
-    // Show overlay
-    overlay.classList.add('visible');
+    openOverlay(slide);
   });
 });
 
+function openOverlay(slide) {
+    const title = slide.getAttribute('data-title');
+    const problem = slide.getAttribute('data-problem');
+    const solution = slide.getAttribute('data-solution');
+    const team = slide.getAttribute('data-team');
+    const images = JSON.parse(slide.getAttribute('data-images'));
+
+    const swiperWrapper = overlay.querySelector('.swiper-wrapper');
+    swiperWrapper.innerHTML = ''; // Clear existing slides
+
+    // Add slides for each image
+    images.forEach(imageSrc => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `<img src="${imageSrc}" alt="${title}">`;
+        swiperWrapper.appendChild(slide);
+    });
+
+   // Update overlay text
+   overlayTitle.textContent = title;
+   overlay.querySelector('.problem').textContent = problem;
+   overlay.querySelector('.solution').textContent = solution;
+   overlay.querySelector('.team').textContent = team;
+
+    overlay.classList.add('visible');
+
+    // Initialize or update Swiper
+    if (overlaySwiper) {
+        overlaySwiper.update();
+    } else {
+        overlaySwiper = new Swiper('.overlay-swiper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
+}
+
 // Close overlay when close button is clicked
 closeBtn.addEventListener('click', () => {
-  overlay.classList.remove('visible');
-});
-
-// Close overlay when clicking outside the content
-overlay.addEventListener('click', (e) => {
-  if (e.target === overlay) {
     overlay.classList.remove('visible');
-  }
-});
+  });
+  
+  // Close overlay when clicking outside the content
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove('visible');
+    }
+  });
 
-// Slider Navigation inside Overlay
-overlay.addEventListener('click', () => {
-    // Logic for navigating to the next image in the overlay slider
-});
+// Remove the old Slider Navigation inside Overlay
+// The navigation is now handled by Swiper
 
 let swiper;
 
@@ -129,14 +156,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function downloadCV() {
     // Replace 'path/to/your/cv.pdf' with the actual path to your PDF file
-    const pdfUrl = 'path/to/your/cv.pdf';
+    const pdfUrl = './CV - Felipe Lourenço.pdf';
+
+     // Open the PDF in a new tab
+     window.open(pdfUrl, '_blank');
     
     // Create a temporary anchor element
     const link = document.createElement('a');
     link.href = pdfUrl;
     
     // Set the download attribute with the desired file name
-    link.download = 'Felipe_Lourenco_CV.pdf';
+    link.download = 'CV - Felipe Lourenço.pdf';
     
     // Append the link to the body
     document.body.appendChild(link);

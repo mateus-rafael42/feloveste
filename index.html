@@ -13,21 +13,19 @@
     <!-- Header Section with Background Image and Floating Tabs -->
     <!-- Header Section with Background Image and Floating Tabs -->
     <header>
-        <div class="right-aligned-section">
+        <div class="centered-section">
             <div class="artwork-container">
                 <div class="artwork-box">
-                    <div>
-                        <img src="vagabond.png" alt="Work 1" class="main-artwork">
-                    </div>
                     <div class="artwork-box__text">
                         <p>jusqu'ici tout va bien. L'importance c'est pas la chute, c'est l'atterrissage.</p>
                     </div>
-                    <!-- ... rest of the content ... -->
+                    <div class="main-artwork-container">
+                        <img src="lahaine.png" alt="La Haine" class="main-artwork">
+                    </div>
                     <div class="tabs">
-                        <button class="tab active" data-filter="all">All</button>
-                        <button class="tab" data-filter="projects">Projects</button>
-                        <button class="tab" data-filter="ufpr">UFPR</button>
-                        <button class="tab" data-filter="sketches">Sketches</button>
+                        <button class="tab active" data-filter="all">Tudo</button>
+                        <button class="tab" data-filter="projects">Projetos</button>
+                        <button class="tab" data-filter="ufpr">Faculdade</button>
                     </div>
                 </div>
             </div>
@@ -38,31 +36,94 @@
     <section class="slider-section">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" data-category="projects" data-image="cadeira.png" data-title="Project 1 Title" data-description="Detailed description of Project 1 goes here. Explain the problem, your solution, and the impact.">
-                    <img src="cadeira.png" alt="Project 1 Title">
+                <!-- Replace or update each slide like this -->
+                <div class="swiper-slide" data-category="projects" 
+                    data-images='["cowboyskull-1.png", "cowboyskull.png", "fish-1.png", "fish.png", "fishermen-1.png", "fishermen.png"]'
+                    data-title="3 Artes Gyro"
+                    data-problem="A criação de 3 artes, onde cada uma delas tem um elemento em comum em três situações diferentes, representadas pela mesma coisa, nesse caso o peixe.
+                    A primeira arte terá de conter um homem caveira e uma criança pescando, ao fundo montanhas, em um lago grande, paisagem bonita, varas de pesca e um balde de peixes ao lado esquerdo da criança e homem ao lado direito, ambos de costas.
+                    A segunda seria um peixe em decomposição jogado no chão, onde a morte reside.
+                    O terceiro é uma fábrica de peixes, mostrando bem o processo repetitivo e vários peixes mortos em uma bancada. 
+                    "
+                    data-solution="Na primeira arte, 'Bem-vindo' vemos um garoto  pescando seu primeiro peixe, com seu pai, aqui o peixe representa alegria, felicidade, orgulho, amor.
+                    Na segunda, 'Até logo' só vemos o peixe, agora abandonado, destruído, corrigido pelo tempo, que é representado com o sentimento de transformação.
+                    Em 'Adeus' vemos uma imagem de uma fábrica, onde o peixe agora representa melancolia, tédio.
+                    
+                    Aquele elemento que já foi seu maior momento de alegria e euforia, é abandonado e começa a ser destruído, e quando você se dá conta ele ja nao tem significado algum pra você, o peixe (sonho) no final é processado, abandonado e vendido facilmente, pode ter até um gosto semelhante, mas não é nada em comparação ao que você sentiu quando sonhou (pescou) pela primeira vez.
+                    "
+                    data-team="Felipe Lourenço">
+                <img src="cowboyskull-1.png" alt="GYRO">
                 </div>
-    
-                <div class="swiper-slide" data-category="ufpr" data-image="cadeira2.png" data-title="Project 2 Title" data-description="Detailed description of Project 2 goes here. Highlight your role, the technologies used, and the outcomes achieved.">
-                    <img src="cadeira2.png" alt="Project 2 Title">
+                <div class="swiper-slide" data-category="ufpr" 
+                     data-images='["macuama.png", "macuama-3.png", "macuama-1.png", "macuama-2.png"]'
+                     data-title="Macramê"
+                     data-problem="Criar e confeccionar em modelo escala 1:1 um mobiliário para o Campus Reitoria da UFPR, tendo madeira como material principal. Partindo da necessidade de socialização e assentos na região em questão.
+                     "
+                     data-solution="Uma poltrona móvel de 3 assentos, feito para ser movido onde for preferível para que a convivência de mais uma pessoa no mesmo gere a socialização e a diversão ao movê-lo. Feito em madeira curva para remeter a visual amigável e convidativo com tramas de corda náutica azuis e quinas revestidas para aguentar o impacto ao ser movido pelo campus. Inspirado nos tumbleweeds do deserto e como se movem, Macramê foi pensado para funcionar com mais de um juntos no mesmo espaço. 
+                     "
+                     data-team="Eduardo Olegario, Felipe Lourenço, Geovani Borin, Júlia Curi e Matheus De Paula.">
+                    <img src="macuama.png" alt="MACUAMA">
                 </div>
-    
-                <div class="swiper-slide" data-category="projects" data-image="cadeira.png" data-title="Project 3 Title" data-description="Detailed description of Project 3 goes here. Discuss the design process, any challenges overcome, and user feedback received.">
-                    <img src="cadeira.png" alt="Project 3 Title">
+                <div class="swiper-slide" data-category="projects" 
+                    data-images='["clym-logo.png", "clym.png", "clym-1.png", "clym-2.png"]'
+                    data-title="Project Title"
+                    data-problem="Description of the problem goes here..."
+                    data-solution="Description of the solution goes here..."
+                    data-team="Description of the team goes here...">
+                    <img src="clym-logo.png" alt="CLYM">
                 </div>
-
-                <div class="swiper-slide" data-category="ufpr" data-image="cadeira2.png" data-title="Project 1 Title" data-description="Detailed description of Project 1 goes here. Explain the problem, your solution, and the impact.">
-                    <img src="cadeira2.png" alt="Project 1 Title">
+                <div class="swiper-slide" data-category="projects" 
+                    data-images='["cowboy-3.png", "cowboy-1.png", "cowboy-2.png", "cowboy.png"]'
+                    data-title="O Mal"
+                    data-problem="Criação de uma arte para uma estampa de camiseta que lembra os filmes clássicos de Velho-Oeste."
+                    data-solution="A arte 'O Mal' foi inspirada nos cartazes de procurado do velho oeste, com traços que pareçam ser inacabados por conta do tempo, os diferentes traços e texturas fazem com que isso fique ainda mais explícito. O sentimento impresso na arte é o de rebeldia e liberdade do homem mal que só tem a companhia inseparável de seu cavalo e revolver, onde espera ser parado apenas pela morte."
+                    data-team="Felipe Lourenço.">
+                    <img src="cowboy-3.png" alt="GYRO ART 1">
                 </div>
-
-                <div class="swiper-slide" data-category="projects" data-image="cadeira.png" data-title="Project 3 Title" data-description="Detailed description of Project 3 goes here. Discuss the design process, any challenges overcome, and user feedback received.">
-                    <img src="cadeira.png" alt="Project 3 Title">
+                <div class="swiper-slide" data-category="ufpr" 
+                     data-images='["luz.png", "luz-1.png", "luz-2.png"]'
+                     data-title="Lum"
+                    data-problem="Criar e confeccionar uma luminária feita inteira de papel com iluminação de fita de led ou spot de luz. 
+                    "
+                    data-solution="Lum é uma luminária feita para bancadas e com formato tubular devido ao seu mecanismo de iluminação indireto, onde gera uma iluminação ainda mais tranquila devido ao papel vegetal na parte frontal, que faz com que a luz fique ainda mais difusa. O spot de iluminação de Lum fica na sua base iluminando para cima, onde a luz rebate a cor que é selecionada no centro do corpo tubular, onde possui três faces com cores diferentes para o clima desejado, rosa vibrante, laranja sereno e branco neutro.
+                    "
+                    data-team="Felipe Lourenço e Geovani Borin.
+                    ">
+                    <img src="luz-2.png" alt="LAMP">
                 </div>
-
-                <div class="swiper-slide" data-category="ufpr" data-image="cadeira2.png" data-title="Project 1 Title" data-description="Detailed description of Project 1 goes here. Explain the problem, your solution, and the impact.">
-                    <img src="cadeira2.png" alt="Project 1 Title">
+                <div class="swiper-slide" data-category="projects" 
+                     data-images='["gyro-3.png", "gyro-1.png", "gyro-2.png", "gyro.png"]'
+                     data-title="Gyro - Logo"
+                    data-problem="Criação de uma logo monocromático de muitos detalhes e que remeta a algo monstruoso e fantasmagórico, que pareça não ser deste mundo e possa ser replicado em roupas, acessórios e materiais gráficos.
+                    "
+                    data-solution="Logo inspirada nas criaturas abissais, mais precisamente nos peixes da família dos Stomiidae. Um peixe de visual amedrontador com escamas aparentes e se movimentando pronto para atacar, mais do que isso, o movimento e os olhos vazios são para se parecer um fantasma vagando, mas atento.
+                    "
+                    data-team="Felipe Lourenço.
+                    ">
+                    <img src="gyro-3.png" alt="GYRO">
                 </div>
-
-                <!-- Add more slides as needed -->
+                
+                <div class="swiper-slide" data-category="ufpr" 
+                    data-images='["b3-4.png", "b3-1.png", "b3-2.png", "b3.png", "b3-3.png"]'
+                    data-title="B-3"
+                    data-problem="Criar e confeccionar um modelo de aparência para um espaço onde a ação fundamental daquele ambiente é a convivência, onde o ambiente em questão são as festas e tabacarias. 
+                    "
+                    data-solution="Uma bolsa transversal para narguilé, idealizada para jovens de origem periférica, que resolve o problema de transporte de bebida, narguile e acessórios para festas, sociais e tabacarias. Além da funcionalidade de transporte, a bolsa possui forte apelo estético em moda sportswear, monocromático com detalhes no todo e possui contraste causado por costuras, engates, brilho e adornos.
+                    "
+                    data-team="Felipe Lourenço e Matheus De Paula.">
+                    <img src="b3-4.png" alt="B3">
+                </div>
+                <div class="swiper-slide" data-category="projects" 
+                     data-images='["pbs-3.png", "pbs-1.png", "pbs-2.png", "pbs.png"]'
+                     data-title="Arte Distribuidora PBS"
+                     data-problem="Criação e confecção de uma arte em uma distribuidora, contendo o nome (PBS) e outro elemento de minha preferência.
+                     "
+                     data-solution="Um grafite com letras formando um arco, dando movimento, vermelho como cor predominante pois a parede em questão fica no sentido de uma rua movimentada, e cromado apenas para dar o brilho das letras. As letras são pintadas apenas com rolo e pincel e os elementos externos das letras é feito todo em preto e branco no spray para criar contraste com um traço limpo das letras e um traço sujo e escorrido do spray. O personagem à esquerda é da obra Japonesa conhecida mundialmente, 'Akira' feita por Katsuhiro Otomo, onde na obra está algemado e estendendo a mão para pegar um isqueiro para acender o seu cigarro já na boca.">
+                    <img src="pbs-3.png" alt="PBS">
+                </div>
+                
+                <!-- Update other slides similarly -->
+                <!-- ... -->
     
             </div>
             <!-- Navigation arrows -->
@@ -100,11 +161,30 @@
     <div id="overlay">
         <div class="overlay-content">
         <div class="overlay-image">
-            <img src="" alt="Project Image">
+            <!-- Swiper container for overlay images -->
+            <div class="swiper overlay-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Swiper slides will be dynamically added here -->
+                </div>
+                <!-- Add navigation arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </div>
         <div class="overlay-text">
             <h2></h2>
-            <p></p>
+            <div class="paragraph">
+                <h3>Missão:</h3>
+                <p class="problem"></p>
+            </div>
+            <div class="paragraph">
+                <h3>Solução:</h3>
+                <p class="solution"></p>
+            </div>
+            <div class="paragraph">
+                <h3>Equipe:</h3>
+                <p class="team"></p>
+            </div>
         </div>
         </div>
         <span class="close-btn">&times;</span>
