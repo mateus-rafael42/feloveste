@@ -66,9 +66,35 @@ function openOverlay(slide) {
 
    // Update overlay text
    overlayTitle.textContent = title;
-   overlay.querySelector('.problem').textContent = problem;
-   overlay.querySelector('.solution').textContent = solution;
-   overlay.querySelector('.team').textContent = team;
+   
+   // Conditionally show/hide paragraph divs based on data attributes
+   const problemDiv = overlay.querySelector('.paragraph:nth-child(2)');
+   const solutionDiv = overlay.querySelector('.paragraph:nth-child(3)');
+   const teamDiv = overlay.querySelector('.paragraph:nth-child(4)');
+   
+   // Show/hide problem section
+   if (problem && problem.trim() !== '') {
+       problemDiv.style.display = 'block';
+       overlay.querySelector('.problem').textContent = problem;
+   } else {
+       problemDiv.style.display = 'none';
+   }
+   
+   // Show/hide solution section
+   if (solution && solution.trim() !== '') {
+       solutionDiv.style.display = 'block';
+       overlay.querySelector('.solution').textContent = solution;
+   } else {
+       solutionDiv.style.display = 'none';
+   }
+   
+   // Show/hide team section
+   if (team && team.trim() !== '') {
+       teamDiv.style.display = 'block';
+       overlay.querySelector('.team').textContent = team;
+   } else {
+       teamDiv.style.display = 'none';
+   }
 
     overlay.classList.add('visible');
 
